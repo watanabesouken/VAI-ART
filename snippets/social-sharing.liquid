@@ -1,0 +1,27 @@
+{% if settings.share_facebook %}
+ 	{% if product.handle == "lee" %}
+        ここにLee坊シールのページで共有させたい内容を入れる
+ 	{% else %}
+   <li>
+<a target="_blank" href="//www.facebook.com/sharer.php?quote=アプロ総研のマスコットキャラ%0aLee坊がついに登場！&u={{ shop.url | append: share_permalink }}" class="btn btn--small btn--share share-facebook">
+    {% include 'icon-facebook' %}
+    <span class="share-title" aria-hidden="true">{{ 'general.social.share_on_facebook' | t }}</span>
+    <span class="visually-hidden">{{ 'general.social.alt_text.share_on_facebook' | t }}</span>
+</a>
+   </li>
+ 	{% endif %}
+ {% endif %}
+
+ {% if settings.share_facebook %}
+ 	{% if product.handle == "lee" %}
+        ここにLee坊シールのページで共有させたい内容を入れる
+ 	{% else %}
+   <li>
+ <a target="_blank" href="//twitter.com/share?text=アプロ総研のマスコットキャラ%0aLee坊がついに登場！%0a&url={{ shop.url | append: share_permalink }}%0a%0a&hashtags=アプロ総研,lee坊" class="btn btn--small btn--share share-twitter">
+    {% include 'icon-twitter' %}
+    <span class="share-title" aria-hidden="true">{{ 'general.social.share_on_twitter' | t }}</span>
+    <span class="visually-hidden">{{ 'general.social.alt_text.share_on_twitter' | t }}</span>
+</a>
+   </li>
+ 	{% endif %}
+ {% endif %}
